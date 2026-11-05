@@ -1,0 +1,41 @@
+{
+    "products": [
+        { "name": "Sauce Labs Backpack", "price": "$29.99" },
+        { "name": "Sauce Labs Bike Light", "price": "$9.99" },
+        { "name": "Sauce Labs Bolt T-Shirt", "price": "$15.99" },
+        { "name": "Sauce Labs Fleece Jacket", "price": "$49.99" },
+        { "name": "Sauce Labs Onesie", "price": "$7.99" },
+        { "name": "Test.allTheThings() T-Shirt (Red)", "price": "$15.99" }
+    ],
+    "sortOptions": [
+        { "value": "az", "label": "Name (A to Z)" },
+        { "value": "za", "label": "Name (Z to A)" },
+        { "value": "lohi", "label": "Price (low to high)" },
+        { "value": "hilo", "label": "Price (high to low)" }
+    ],
+    "cartSelection": ["Sauce Labs Backpack", "Sauce Labs Bike Light"],
+    "taxRate": 0.08,
+    "pageTitles": {
+        "inventory": "Products",
+        "cart": "Your Cart",
+        "checkoutInformation": "Checkout: Your Information",
+        "checkoutOverview": "Checkout: Overview",
+        "checkoutComplete": "Checkout: Complete!"
+    },
+    "orderComplete": {
+        "header": "Thank you for your order!",
+        "text": "Your order has been dispatched, and will arrive just as fast as the pony can get there!"
+    },
+    "restrictedPages": [
+        { "path": "inventory.html", "error": "Epic sadface: You can only access '/inventory.html' when you are logged in." },
+        { "path": "cart.html", "error": "Epic sadface: You can only access '/cart.html' when you are logged in." },
+        { "path": "checkout-step-one.html", "error": "Epic sadface: You can only access '/checkout-step-one.html' when you are logged in." }
+    ],
+    "aboutUrl": "https://saucelabs.com/",
+    "userBehaviours": {
+        "brokenImageSrcContains": "sl-404",
+        "problemUserClickedProduct": "Sauce Labs Backpack",
+        "problemUserOpenedProduct": "Sauce Labs Fleece Jacket",
+        "errorUserSortAlert": "Sorting is broken! This error has been reported to Backtrace."
+    }
+}

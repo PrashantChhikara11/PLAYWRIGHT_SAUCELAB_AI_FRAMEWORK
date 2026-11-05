@@ -1,0 +1,21 @@
+{
+    "validGenders": ["male", "female"],
+    "validUserStatuses": ["active", "inactive"],
+    "validTodoStatuses": ["pending", "completed"],
+    "invalidGender": "unknown",
+    "invalidStatus": "unknown",
+    "nonExistingId": 999999999,
+    "invalidToken": "invalid-token-12345",
+    "pagination": { "page": 1, "perPage": 5, "defaultPerPage": 10, "maxPerPage": 100 },
+    "messages": {
+        "notFound": "Resource not found",
+        "invalidToken": "Invalid token",
+        "authenticationFailed": "Authentication failed",
+        "blank": "can't be blank",
+        "emailTaken": "has already been taken",
+        "invalidEmail": "is invalid",
+        "invalidGender": "can't be blank, can be male of female",
+        "invalidTodoStatus": "can't be blank, can be pending or completed",
+        "userMustExist": "must exist"
+    }
+}

@@ -1,0 +1,7 @@
+[
+    { "testName": "Valid checkout info", "firstName": "John", "lastName": "Smith", "postalCode": "1010", "expected": "success", "expectedError": "" },
+    { "testName": "All fields blank", "firstName": " ", "lastName": " ", "postalCode": " ", "expected": "failure", "expectedError": "Error: First Name is required" },
+    { "testName": "Missing first name", "firstName": " ", "lastName": "Smith", "postalCode": "1010", "expected": "failure", "expectedError": "Error: First Name is required" },
+    { "testName": "Missing last name", "firstName": "John", "lastName": " ", "postalCode": "1010", "expected": "failure", "expectedError": "Error: Last Name is required" },
+    { "testName": "Missing postal code", "firstName": "John", "lastName": "Smith", "postalCode": " ", "expected": "failure", "expectedError": "Error: Postal Code is required" }
+]

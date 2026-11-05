@@ -1,0 +1,13 @@
+[
+    { "testName": "Valid standard user", "username": "standard_user", "password": "secret_sauce", "expected": "success", "expectedError": "" },
+    { "testName": "Valid problem user", "username": "problem_user", "password": "secret_sauce", "expected": "success", "expectedError": "" },
+    { "testName": "Valid performance glitch user", "username": "performance_glitch_user", "password": "secret_sauce", "expected": "success", "expectedError": "" },
+    { "testName": "Valid error user", "username": "error_user", "password": "secret_sauce", "expected": "success", "expectedError": "" },
+    { "testName": "Valid visual user", "username": "visual_user", "password": "secret_sauce", "expected": "success", "expectedError": "" },
+    { "testName": "Locked out user", "username": "locked_out_user", "password": "secret_sauce", "expected": "failure", "expectedError": "Epic sadface: Sorry, this user has been locked out." },
+    { "testName": "Invalid username", "username": "invalid_user", "password": "secret_sauce", "expected": "failure", "expectedError": "Epic sadface: Username and password do not match any user in this service" },
+    { "testName": "Invalid password", "username": "standard_user", "password": "wrong_password", "expected": "failure", "expectedError": "Epic sadface: Username and password do not match any user in this service" },
+    { "testName": "Blank username", "username": " ", "password": "secret_sauce", "expected": "failure", "expectedError": "Epic sadface: Username is required" },
+    { "testName": "Blank password", "username": "standard_user", "password": " ", "expected": "failure", "expectedError": "Epic sadface: Password is required" },
+    { "testName": "Both blank", "username": " ", "password": " ", "expected": "failure", "expectedError": "Epic sadface: Username is required" }
+]
