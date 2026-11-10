@@ -39,7 +39,7 @@ test.describe('Inventory', () => {
         test(`Product Sorting - ${option.label} @master @regression @web`, async ({ inventoryPage }) => {
 
             await test.step(`1) Select sort option "${option.value}"`, async () => {
-                await inventoryPage.selectSortOption(option.value);
+                await inventoryPage.sortProductsBy(option.value);
                 await expect(inventoryPage.lblActiveSort).toHaveText(option.label);
             });
 

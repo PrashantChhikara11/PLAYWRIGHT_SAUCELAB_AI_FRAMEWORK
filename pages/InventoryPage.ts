@@ -1,4 +1,4 @@
-import { Page, Locator } from '@playwright/test';
+import { Page, Locator, expect } from '@playwright/test';
 
 export class InventoryPage {
     private readonly page: Page;
@@ -82,11 +82,27 @@ export class InventoryPage {
     }
 
     /**
-     * Selects a sort option
+     * Selects a sort option once, without checking the result
+     * (used where sorting is expected to fail, e.g. error_user)
      * @param value - Option value (az, za, lohi, hilo)
      */
     async selectSortOption(value: string): Promise<void> {
         await this.drpSort.selectOption(value);
+    }
+
+    /**
+     * Sorts the products and waits until the app has applied the sort.
+     * Under load the select can change before React attaches its change handler,
+     * leaving the list unsorted; the selection is retried until the active-option
+     * label shows the chosen option.
+     * @param value - Option value (az, za, lohi, hilo)
+     */
+    async sortProductsBy(value: string): Promise<void> {
+        const label = (await this.drpSort.locator(`option[value="${value}"]`).innerText()).trim();
+        await expect(async () => {
+            await this.drpSort.selectOption(value);
+            await expect(this.lblActiveSort).toHaveText(label, { timeout: 2000 });
+        }).toPass({ timeout: 15000 });
     }
 
     /**
